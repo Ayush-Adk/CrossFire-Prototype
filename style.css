@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --crossfire-primary: #173451;
+    --crossfire-secondary: #5897c9;
+    --mid-blue: #13558B;
+    --light-blue: #86d4f3;
+    --lighter-blue: #f9fbff;
+    --less-white: #f8f8fc;
+    --light-gray: #f0f0f4;
+    --less-black: #101010;
+
+    --color-status-1: #f79b24;
+    --color-status-2: #ec8600;
+    --color-status-3: #5690ec;
+    --color-status-4: #437ad3;
+    --color-status-5: #12c49a;
+    --color-status-6: #00a67f;
+
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    --button-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    min-height: 80vh;
+}
+
+/* Nav */
+#nav-top {
+    padding: 16px 0 8px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#nav-top .width-limit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#nav-top img {
+    display: inline-block;
+    width: 180px;
+}
+
+nav {
+    padding: 8px 0;
+    color: black;
+    border-top: 2px solid rgba(0, 100, 200, 0.1);
+    border-bottom: 4px solid var(--crossfire-secondary);
+}
+
+ul {
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+a {
+    width: fit-content;
+}
+
+a,
+a:active {
+    text-decoration: none !important;
+}
+
+nav a,
+nav a:active {
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    width: fit-content;
+}
+
+nav ul li:not(:first-child) {
+    margin-left: 20px;
+}
+
+#user-links a {
+    font-size: 1.2rem;
+    color: var(--crossfire-secondary);
+    position: relative;
+}
+
+#user-links a .notif-num {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background: #C74600;
+    color: white;
+    font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-links a:hover {
+    color: var(--mid-blue);
+}
+
+.hidden {
+    display: none;
+}
+
+.width-limit {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 95%;
+}
+
+h2 {
+    color: var(--crossfire-primary);
+    margin-bottom: 12px;
+}
+
+.bg-crossfire-primary {
+    background: var(--crossfire-primary);
+}
+
+.bg-crossfire-secondary {
+    background: var(--crossfire-secondary);
+}
+
+.bg-mid-blue {
+    background: var(--mid-blue) !important;
+    color: white !important;
+}
+
+.text-crossfire-primary {
+    color: var(--crossfire-primary);
+}
+
+.text-crossfire-secondary {
+    color: var(--crossfire-secondary);
+}
+
+.text-mid-blue {
+    color: var(--mid-blue) !important;
+}
+
+.btn {
+    min-width: 100px;
+    box-shadow: 0 4px 8px #00000060;
+}
+
+/* btn dark blue */
+.btn-blue:hover {
+    background: var(--mid-blue);
+}
+
+.btn.bg-mid-blue:hover, .btn-blue:hover {
+    background: var(--crossfire-primary) !important;
+}
+
+.btn.bg-mid-blue:focus, .btn-blue:focus {
+    box-shadow: 0 0 0 4px #8ec3ef;
+    background: var(--crossfire-primary) !important;
+}
+
+/* btn green */
+.btn-green {
+    color: white !important;
+    background: #038264 !important;
+}
+
+.btn-green:hover {
+    background: #006e55 !important;
+}
+
+.btn-green:focus {
+    box-shadow: 0 0 0 4px #aaa !important;
+    background: #006e55 !important;
+}
+
+/* btn orange */
+.btn-orange {
+    color: white !important;
+    background: #bb5a00 !important;
+}
+
+.btn-orange:hover {
+    background: #9d4c00 !important;
+}
+
+.btn-orange:focus {
+    box-shadow: 0 0 0 4px #aaa !important;
+    background: #9d4c00 !important;
+}
+
+/* btn red */
+.btn-red {
+    color: white !important;
+    background: #a00000 !important;
+}
+
+.btn-red:hover {
+    background: #800000 !important;
+}
+
+.btn-red:focus {
+    box-shadow: 0 0 0 4px #aaa !important;
+    background: #800000 !important;
+}
+
+
+.home-grid {
+    display: grid;
+    row-gap: 30px;
+    column-gap: 20px;
+}
+
+.thead {
+    border-bottom: 2px solid var(--crossfire-secondary);
+}
+
+.unread, .unread td {
+    background: var(--lighter-blue) !important;
+    font-weight: 500;
+}
+
+.unread a {
+    color: #004496;
+}
+
+#login-box {
+    width: 100%;
+    max-width: 500px;
+}
+
+form fieldset,
+.ncr-details,
+.ncr-list,
+#login-box,
+.option-box,
+#msg-box,
+.info-box {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #00000060;
+}
+
+.option-box:hover {
+    background-color: var(--lighter-blue);
+}
+.option-box i {
+    font-size: 5rem;
+    color: var(--crossfire-secondary);
+}
+.option-box:hover i {
+    color: var(--mid-blue);
+}
+.option-box:hover h2 {
+    color: #000;
+}
+
+/* wide buttons */
+.btn-wide,
+.btn-wide .btn {
+    width: 100%;
+    max-width: 200px;
+}
+
+form legend {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px #00000040;
+    transform: translateX(-25px);
+}
+
+form fieldset :not(legend) .fw-bold,
+.ncr-details .fw-bold,
+.ncr-list th {
+    color: var(--mid-blue) !important;
+}
+
+/* jsdelivr.net select2 drop down lists  and other form inputs border*/
+.select2-selection--single,
+fieldset input,
+fieldset select,
+fieldset textarea {
+    border: 1px solid var(--crossfire-secondary) !important;
+    border-radius: 4px;
+}
+
+/* read-only inputs */
+input:read-only {
+    border: none !important;
+}
+input:read-only:focus {
+    outline: none;
+    border: none;
+}
+
+/* Radio buttons border*/
+fieldset input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    border: 1px solid #000 !important;
+    box-shadow: inset 0 0 0 2px #fff;
+}
+fieldset input[type="radio"]:checked {
+    background-color: var(--crossfire-secondary) !important;
+}
+fieldset input[type="radio"]:not(:checked):hover {
+    background-color: #ccc !important;
+}
+fieldset input[type="radio"]:focus {
+    outline: 2px solid black;
+}
+
+.ncr-details hr {
+    margin: 30px 0;
+    border-width: 2px;
+    border-color: #5897c9;
+    opacity: 1;
+}
+
+/* status colors*/
+
+.color-status-1 {
+    color: var(--color-status-1);
+}
+.color-status-2 {
+    color: var(--color-status-2);
+}
+
+.color-status-3 {
+    color: var(--color-status-3);
+}
+.color-status-4 {
+    color: var(--color-status-4);
+}
+
+.color-status-5 {
+    color: var(--color-status-5);
+}
+.color-status-6 {
+    color: var(--color-status-6);
+}
+
+.arrow-btn {
+    border: none;
+    border-radius: 3px;
+    padding: 1px 3px;
+    color: var(--mid-blue);
+}
+
+/* modal */
+
+.ncr-modal {
+    background-color: #00004020 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 20vh;
+}
+
+.ncr-modal-content {
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 0 2px 12px 5px #00000090;
+}
+
+.ncr-modal-top {
+    background: var(--light-gray);
+    border-bottom: 4px solid var(--crossfire-secondary);
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.modal-close {
+    min-width: fit-content;
+}
+
+.ncr-modal-body {
+    padding: 20px;
+}
+
+/* notifications */
+
+.notif-row {
+    width: 100%;
+    background: none;
+    border: none;
+    margin-bottom: 1px;
+    text-align: left;
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+.notif-row:nth-child(1) {
+    border-top: 1px solid #ddd;
+}
+
+.notif-row:hover, .unread:hover {
+    background: #eee !important;
+}
+
+.notif-row > span:nth-child(1) {
+    display: inline-block;
+    width: 30%;
+}
+
+#close-notif-btn {
+    display: block;
+    margin-left: auto;
+    min-width: 20px;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+}
+
+/* Media queries */
+
+@media screen and (width > 760px) {
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-wide,
+    .btn-wide .btn {
+        max-width: 300px;
+    }
+}
+
+@media screen and (width > 1400px) {
+    .width-limit {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (width > 2000px) {
+    .width-limit {
+        max-width: 1400px;
+    }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/9b4432bc04.js" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- tab icon -->
+    <link rel="icon" type="image/png" href="images/Crossfire-icon.png">
+    <title>Quality Rep NCR List - Crossfire NCR App</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+
+        <!-- Nav top - Common for all the pages -->
+        <div id="nav-top"></div>
+
+        <!-- Nav -->
+        <nav>
+            <div class="width-limit">
+                <ul>
+                    <li><a href="quality-rep-home.html">Home</a></li>
+                    <li><a href="quality-rep-list.html">NCR List</a></li>
+                    <li><a href="quality-rep-create.html">Create New NCR</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="width-limit py-4">
+            <h1 class="fs-4">NCR Details</h1>
+            
+            <h2 class="fs-5 mt-5" id="qual-rep-sect-title">Quality Rep Section</h2>
+
+            <div class="ncr-details p-5">
+
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col">
+                        <div>
+                            <!-- Identify Process Applicable -->
+                            <div class="fw-bold col">Identify Process Applicable: </div>
+                            <div class="col">Supplier or Rec-Insp</div>
+                        </div>
+
+                        <div class="mt-3">
+                            <!-- Supplier Name -->
+                            <div class="fw-bold">Supplier Name: </div>
+                            <div>Astro Supplies</div>
+                        </div>
+                    </div>
+
+                    <div class="col d-grid gap-1 mt-3 mt-md-0" id="ncr-nums-group">
+                        <!-- NCR No -->
+                        <div class="d-flex row-cols-2">
+                            <div class="fw-bold">NCR No.: </div>
+                            <div>2024-0107</div>
+                        </div>
+
+                        <!-- PO or Prod. No -->
+                        <div class="d-flex row-cols-2">
+                            <div class="fw-bold">PO or Prod. No.:</div>
+                            <div>17-2145</div>
+                        </div>
+
+                        <!-- Sales Order No -->
+                        <div class="d-flex row-cols-2">
+                            <div class="fw-bold">Sales Order No.:</div>
+                            <div>2024-1054-0256</div>
+                        </div>
+
+                        <!-- Quantity Received -->
+                        <div class="d-flex row-cols-2">
+                            <div class="fw-bold">Quantity Received:</div>
+                            <div>3400</div>
+                        </div>
+
+                        <!-- Quantity Defective -->
+                        <div class="d-flex row-cols-2">
+                            <div class="fw-bold">Quantity Defective:</div>
+                            <div>620</div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div>
+                    <!-- Description of Item -->
+                    <div class="fw-bold">Description of Item (including SAP No.):</div>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus dolores corrupti harum
+                        expedita explicabo, nulla exercitationem praesentium autem cum adipisci amet saepe.</div>
+                </div>
+                <div class="mt-3">
+                    <!-- Description of Defect -->
+                    <div class="fw-bold">Description of Defect (in as much detail as possible):</div>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam voluptas labore voluptatum
+                        magnam, a alias. Quod, reiciendis? Qui commodi doloribus quasi eum suscipit vel, ab dignissimos,
+                        aliquid facilis, explicabo reprehenderit.</div>
+                </div>
+                <div class="mt-3">
+                    <!-- Item marked Nonconforming -->
+                    <span class="fw-bold">Item marked Nonconforming:</span>
+                    <span>Yes</span>
+                </div>
+
+                <hr>
+
+                <div class="row row-cols-1 row-cols-md-2">
+                    <div class="col">
+                        <!-- Quality Representative's Name -->
+                        <div class="fw-bold">Quality Representative's Name:</div>
+                        <span>Sara Smith</span>
+                    </div>
+                    <div class="col mt-3 mt-md-0">
+                        <!-- Date -->
+                        <div class="fw-bold">Date:</div>
+                        <span>10/14/2024</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="mt-4">
+                <!-- List btn -->
+                <a class="btn btn-dark" href="quality-rep-list.html">List</a>
+                <!-- Edit btn -->
+                <a class="btn bg-mid-blue" id="edit-btn" style="display: none;" href="quality-rep-edit.html">Edit</a>
+                <!-- Print PDF -->
+                <button class="btn bg-mid-blue" onclick="generatePDF('qual-rep')">Download PDF</button>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-light">
+        <div class="width-limit">
+            <p><small>Developed by 404 Cached</small></p>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="javascript/nav-top-quality-rep.js"></script>
+    <script src="javascript/print-pdf.js"></script> <!-- PDF SCRIPT -->
+
+    <!-- Check status to know if show edit button or not -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search)
+            const status = urlParams.get('status')
+
+            if (status === '1') {
+                document.getElementById('edit-btn').style.display = 'inline-block'
+                console.log("status: 1") // If status == 1 then show edit btn
+            }
+            else if (status == '2') {
+                console.log("status: 2")
+            }
+        })
+    </script> -->
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+        <!-- Imported Library for PDF - PETER -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"
+            integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
