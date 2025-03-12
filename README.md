@@ -6,3 +6,6 @@ Site: [Crossfire NCR App](https://leomathot.github.io/Prog-1180/)
 - Peter Altamirano
 - Taicheng Li
 - Leonardo Mathot
+
+
+-- --
